@@ -31,3 +31,36 @@ Validator	Ensures required fields are present and valid (order_id, timestamp, it
 Transformer	Cleans and normalizes fields (e.g., converts currency text to numbers, standardizes payment_status, recalculates totals).
 Analyzer	Computes total revenue, average revenue, and counts per payment status.
 Exporter	Writes cleaned and analyzed data to a new JSON file (shoplink_cleaned.json).
+
+## How to Run
+
+Clone the repository
+
+````
+git clone https://github.com/emmanuelalafaa97/de-week3-advancedtesting-Emmanuel_Alafaa.git
+cd de-week3-advancedtesting-<yourname>
+```
+
+
+Install dependencies
+
+```
+pip install -r requirements.txt
+
+```
+
+
+Run the tests
+
+```
+pytest -v
+
+```
+
+
+Run the full pipeline
+
+```
+python -m order_pipeline.pipeline
+
+```
