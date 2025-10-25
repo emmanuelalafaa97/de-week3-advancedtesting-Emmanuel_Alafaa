@@ -18,3 +18,16 @@ Exports the processed results
 Verifies each step using comprehensive unit tests
 
 You are the data quality engineer — your goal is to break the pipeline before the data breaks the business.
+
+
+
+## Pipeline Components
+
+The pipeline is modular and consists of five main components:
+
+### Component	Description
+Reader	Reads JSON data and returns a list of dictionaries. Raises errors for unsupported formats or empty files.
+Validator	Ensures required fields are present and valid (order_id, timestamp, item, quantity, price, payment_status, total). Rejects invalid or missing data.
+Transformer	Cleans and normalizes fields (e.g., converts currency text to numbers, standardizes payment_status, recalculates totals).
+Analyzer	Computes total revenue, average revenue, and counts per payment status.
+Exporter	Writes cleaned and analyzed data to a new JSON file (shoplink_cleaned.json).
